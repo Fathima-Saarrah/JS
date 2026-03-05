@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinkit Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Blinkit Logo">
+        </div>
+        
+        <div class="location-picker">
+            <div class="delivery-time">Delivery in 15 minutes</div>
+            <div class="address">17 11th main road, Bannerghatta... <i class="fas fa-caret-down"></i></div>
+        </div>
+
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder='Search "chips"'>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="login-btn">Login</a>
+            <button class="cart-btn" onclick="window.location.href='cart.html'">
+                <i class="fas fa-shopping-cart"></i> My Cart (<span id="cart-count">0</span>)
+
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>Stock up on daily essentials</h1>
+                <p>Get farm-fresh goodness & a range of exotic fruits, vegetables, eggs & more</p>
+                <button class="shop-now" onclick="window.location.href='ex.html'">Shop Now</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&q=80&w=800" alt="Fresh Vegetables">
+            </div>
+        </section>
+
+        <section class="category-grid">
+            <div class="card pharmacy-card">
+                <div class="card-text">
+                    <h2>Pharmacy at your doorstep!</h2>
+                    <p>Cough syrups, pain relief sprays & more</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=300" alt="Pharmacy">
+            </div>
+
+            <div class="card pet-card">
+                <div class="card-text">
+                    <h2>Pet care supplies at your door</h2>
+                    <p>Food, treats, toys & more</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=300" alt="Pet Care">
+            </div>
+
+            <div class="card baby-card">
+                <div class="card-text">
+                    <h2>No time for a diaper run?</h2>
+                    <p>Get baby care essentials</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=300" alt="Baby Care">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="scriptboth.js"></script>
+</body>
+</html>

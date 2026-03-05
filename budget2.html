@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Grocery Demo</title>
+    <style>
+        /* --- CSS (The Look) --- */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        button {
+            width: 88%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button:hover { background-color: #45a049; }
+        ul { list-style: none; padding: 0; margin-top: 20px; text-align: left; }
+        li { 
+            background: #f9f9f9; 
+            padding: 10px; 
+            border-bottom: 1px solid #eee; 
+            display: flex; 
+            justify-content: space-between; 
+        }
+        #message { font-weight: bold; margin-top: 15px; color: red; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Grocery List</h1>
+        <input type="text" id="itemName" placeholder="Item name (e.g. Milk)">
+        <input type="number" id="itemPrice" placeholder="Price (e.g. 5)">
+        
+        <button onclick="addItem()">Add to List</button>
+        
+        <ul id="list"></ul>
+        
+        <hr>
+        <h3>Total: $<span id="totalPrice">0.00</span></h3>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        /* --- JAVASCRIPT (The Brains) --- */
+        let total = 0; // Our Variable
+
+        function addItem() {
+            // 1. Get values from HTML
+            let currentTotal =0;
+            let name = document.getElementById("itemName").value;
+            let priceInput = document.getElementById("itemPrice").value;
+            
+            // 2. Convert string to number (Operators)
+            let price = parseFloat(priceInput);
+
+            // 3. Validation (If Conditions)
+            if (name === "" || isNaN(price)) {
+                alert("Please enter both a name and a price.");
+                return;
+            }
+
+            // 4. Update the Total (Math Operators)
+            total = total + price;
+            console.log("Current Total Variable:", total);
+            // 5. Create the List Item (String Manipulation)
+            let list = document.getElementById("list");
+            let listItem = document.createElement("li");
+            
+            // Template Literals make strings easy!
+            listItem.innerHTML = `<span>${name}</span> <span>$${price.toFixed(2)}</span>`;
+            list.appendChild(listItem);
+
+            // 6. Logic Check (If Condition)
+            if (total > 100) {
+                document.getElementById("message").innerText = "Budget Exceeded!";
+            }
+
+            // 7. Update UI
+            document.getElementById("totalPrice").innerText = total.toFixed(2);
+
+            // Clear inputs for next item
+            document.getElementById("itemName").value = "";
+            document.getElementById("itemPrice").value = "";
+        }
+    </script>
+</body>
+</html>

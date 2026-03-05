@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    gap: 20px;
+}
+
+.logo img { height: 40px; }
+
+.location-picker .delivery-time {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.location-picker .address {
+    font-size: 12px;
+    color: #555;
+}
+
+.search-container {
+    flex-grow: 1;
+    position: relative;
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    margin-left: 10px;
+    outline: none;
+}
+
+.nav-links { display: flex; align-items: center; gap: 20px; }
+.login-btn { text-decoration: none; color: #333; }
+.cart-btn {
+    background: #0c831f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero Banner */
+.container { padding: 20px 5%; }
+
+.hero-banner {
+    background: #318632;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-content { flex: 1; }
+.hero-content h1 { font-size: 42px; margin-bottom: 10px; }
+.hero-image img { width: 400px; border-radius: 10px; }
+
+.shop-now {
+    background: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 120px;
+    object-fit: contain;
+    align-self: flex-end;
+}
+
+.pharmacy-card { background-color: #e3f9fb; color: #007c89; }
+.pet-card { background-color: #fff4d5; color: #8a6d3b; }
+.baby-card { background-color: #f1f1f1; color: #333; }
+
+.order-btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
